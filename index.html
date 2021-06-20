@@ -27,13 +27,21 @@
             </div>
             
             <div id="end-game" style="display: none;">
-                <h2 id="score" style="display: none;">
-                
-                </h2>
+                <h2 id="score" style="display: none;"></h2>
+                <div id="save" style="display: none;">
+                    <label for="initials-input">Initials</label>
+                    <input type="text" name="initials" id="initials-input">
+                </div>
                 <div class="next" style="display: none;">
                     <button id="restart" style="display: none;">Restart</button>
                     <button id="quit" style="display: none;">Quit</button>
                 </div>
+            </div>
+
+            <div id="high-scores" style="display: none;">
+                <h2>High Scores</h2>
+                <h4 id="score"></h4>
+                <h4 id="initials"></h4>
             </div>
         </section>
         <script src="./assets/script.js"></script>

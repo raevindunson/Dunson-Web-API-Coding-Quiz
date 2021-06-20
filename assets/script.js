@@ -98,6 +98,7 @@ function displayOptions() {
 
 var answerButton = document.getElementById("option-name");
 
+// I had trouble getting this function to work, but it was supposed to ensure that the answer button clicked was labeled as answerChoice
 answerButton.addEventListener("click", function(click){
     click.preventDefault;
     var answerChoice = answerButton.match("button");
@@ -125,22 +126,40 @@ function gameOver() {
 }
 
 var score = document.getElementById("score");
-var nextSteps = document.getElementById("next")
-var restartButton = document.getElementById("restart")
-var endButton = document.getElementById("quit")
+var nextSteps = document.getElementById("next");
+var restartButton = document.getElementById("restart");
+var endButton = document.getElementById("quit");
+var save = document.getElementById("save");
+var initialsInput = document.getElementById("initials-input");
 
 function displayScore() {
     gameDisplay.style.display = "none";
     questionDisplay.style.display = "none";
     endGame.style.display = "block";
     score.style.display = "block";
+    save.style.display = "block";
     nextSteps.style.display = "block";
     restartButton.style.display = "block";
     endButton.style.display = "block";
     score.innerHTML = "";
     var scoreh2 = document.createElement(h2);
-    scoreh2.textContent = "You got" + rightAnswers + "out of" + amountQuestions;
+    scoreh2.textContent = rightAnswers + "out of" + amountQuestions;
     score.appendChild(scoreh2);
+}
+
+var highScoreDisplay = document.getElementById("high-scores");
+var initialsSaved = document.getElementById("initials");
+
+endButton.addEventListener('click', function(end) {
+    end.preventDefault;
+    displayHighScores();
+})
+
+function displayHighScores() {
+    highScoreDisplay.style.display = "block";
+    localStorage.setItem("initials", initialsInput);
+    var initials = localStorage.getItem("initials");
+    initialsSaved.textContent = initials;
 }
 
 restartButton.addEventListener('click', function(play) {
