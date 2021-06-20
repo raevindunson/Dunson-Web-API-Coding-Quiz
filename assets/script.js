@@ -3,25 +3,20 @@
 // Quiz questions and answers
 var questionList = [
     {
-        question: "What does HTML stand for?",
-        options: ["Hypo Type Math List", "Hydro Time Main Line", "Hyper Text Markup Language", "Hyper Tempo Math Language"],
-        correct: "Hyper Text Markup Language"
+        question: "What year did Javascript first debut?",
+        options: ["1998", "1995", "1980", "2000"],
+        correct: "1995"
     },
     {
-        question: "Commonly used data types do NOT include___",
-        options: ["Strings", "Booleans", "Alerts", "Numbers"],
-        correct: "Alerts"
+        question: "How do you denote a string in Javascript?",
+        options: ["Parentheses", "Exclamation Point", "Quotations", "Brackets"],
+        correct: "Quotations"
     },
     {
-        question: "What does HTML stand for?",
-        options: ["Hypo Type Math List", "Hydro Time Main Line", "Hyper Text Markup Language", "Hyper Tempo Math Language"],
-        correct: "Hyper Text Markup Language"
-    },
-    {
-        question: "Commonly used data types do NOT include___",
-        options: ["Strings","Booleans","Alerts","Numbers"],
-        correct: "Alerts"
-    },
+        question: "How many values does a Boolean data type represent in Javascript?",
+        options: ["Two", "Five", "Four", "One"],
+        correct: "Two"
+    }
 ]
 
 // Starting the game
