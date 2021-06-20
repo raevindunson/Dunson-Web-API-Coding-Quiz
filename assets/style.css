@@ -1,0 +1,27 @@
+* {
+    margin: auto;
+    padding: 15px;
+}
+
+header {
+    text-align: center;
+}
+
+header button {
+    background-color: purple;
+    color: white;
+}
+
+#game-display button {
+    background-color: purple;
+    color: white;
+}
+
+.next {
+    background-color: red;
+}
+
+#high-scores {
+    background-color: purple;
+    color: white;
+}
