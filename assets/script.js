@@ -56,7 +56,15 @@ function startQuiz() {
 var timerCount = document.getElementById("timer-count");
 
 function startTimer() {
-    var timeRemaining
+    var timeRemaining = 30;
+    var timerStart = setInterval(() => {
+        if (timeRemaining > 0){
+            timerCount.textContent = timeRemaining;
+        } else {
+            clearInterval(timerStart);
+            displayScore();
+        }
+    }, 1000);
 }
 
 function emptyQuiz() {
@@ -102,7 +110,8 @@ function compareAnswer(answerChoice) {
         counter++;
         gameOver();
     } else {
-        counter++
+        counter++;
+        timeRemaining--;
         gameOver();
     }
 }
