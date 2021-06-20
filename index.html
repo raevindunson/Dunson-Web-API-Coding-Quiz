@@ -4,26 +4,38 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>History Quiz</title>
+        <title>Coding Quiz</title>
         <link rel="stylesheet" href="./assets/style.css" />
     </head>
 
     <body>
-        <div id="box">
-            <div id="start-button">Click here to start</div>
-            <div id="quiz-container">
-                <div id="timer">
-                    <div id="count"></div>
-                </div>
-                <div id="questions"></div>
-                <div id="answers">
-                    <div class="answer" id="a"></div>
-                    <div class="answer" id="b"></div>
-                    <div class="answer" id="c"></div>
-                    <div class="answer" id="d"></div>
+        <header id="start-page">
+            <h1>Coding Quiz!</h1>
+            <h2>Answer these questions before time runs out!</h2>
+            <button id="start-button">Click to Start</button>
+        </header>
+
+        <section id="quiz-container">
+            <div id="timer-container" style="display: none;">
+                <div id="time-remaining">Time Remaining</div>
+                <div id="timer-count">75</div>
+            </div>
+            
+            <h2 id="question-display" style="display: none;"></h2>
+            <div id="game-display" style="display: none;">
+            
+            </div>
+            
+            <div id="end-game" style="display: none;">
+                <h2 id="score" style="display: none;">
+                
+                </h2>
+                <div class="next" style="display: none;">
+                    <button id="restart" style="display: none;">Restart</button>
+                    <button id="quit" style="display: none;">Quit</button>
                 </div>
             </div>
-        </div>
+        </section>
         <script src="./assets/script.js"></script>
     </body>
     
